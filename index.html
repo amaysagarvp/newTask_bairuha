@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main Layout */
+        .container {
+            flex: 1;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #1e293b;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 15px 0;
+            cursor: pointer;
+        }
+
+        .sidebar li:hover {
+            color: #38bdf8;
+        }
+
+        /* Right Section */
+        .right-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        .navbar {
+            height: 70px;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            background: #f1f5f9;
+            padding: 30px;
+        }
+
+        /* Footer */
+        footer {
+            height: 60px;
+            background: #111827;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ===================
+           Responsive Design
+        ==================== */
+        @media (max-width: 768px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+
+            <ul>
+                <li>Home</li>
+                <li>Users</li>
+                <li>Products</li>
+                <li>Orders</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <div class="right-section">
+
+            <header class="navbar">
+                <h3>Navbar</h3>
+                <span>Profile</span>
+            </header>
+
+            <main class="content">
+                <h1>Main Content</h1>
+                <p>Your page content goes here.</p>
+            </main>
+
+        </div>
+
+    </div>
+
+    <footer>
+        Footer
+    </footer>
+
+</body>
+</html>
